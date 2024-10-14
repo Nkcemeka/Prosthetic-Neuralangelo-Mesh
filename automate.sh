@@ -17,6 +17,8 @@ COLMAP="container_colmap"
 
 # Name of video
 VID=$1
+LOG_FILE="$(pwd)/${VID%.*}.log" # Define log file path and name
+SCRIPT="$(pwd)/automate.sh"
 
 # start colmap container
 if [ "$(docker ps -aq -f name=${COLMAP})" ]; then
