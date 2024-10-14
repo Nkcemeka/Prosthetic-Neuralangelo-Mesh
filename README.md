@@ -37,6 +37,19 @@ tail -f -n 1 /path/to/your/logfile.log
 ```
 ---
 
+You can also run the colmap and neuralangelo containers separately, also start the reconstruction from neuralangelo. For colmap:
+
+---
+```
+nohup bash automate_colmap.sh video_name.mp4 > logfile.log 2>&1 &
+```
+---
+and for neuralangelo:
+---
+```
+nohup bash automate.sh video_name.mp4 > logfile.log 2>&1 &
+```
+---
 
 
 
