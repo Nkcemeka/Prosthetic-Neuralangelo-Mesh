@@ -10,6 +10,24 @@ Video &#8594; Images &#8594; Rembg &#8594; Neuralangelo &#8594; Post-processor &
 
 Rembg is a deep learning tool for isolating foreground objects. It is used to isolate the residual arm from the rest of the image. The post-processor is a python script that uses trimesh to select the largest connected component from the mesh (We still need more fine-tuning for this as there are shortcomings due to artefacts from the Neuralangelo training process). 
 
+## Prerequisites
++ [Nvidia drivers](https://docs.docker.com/engine/install/)
++ [Docker](https://www.nvidia.com/en-us/drivers/)
+
+or after cloning the repository you can run the scripts(Ubuntu only):
+1. Installing nvidia drivers:
+```
+sudo bash setup_nvidia_drivers.sh
+```
+---
+2. Docker installation:
+```
+sudo bash setup_docker.sh
+```
+---
+> [!WARNING]  
+> Scripts may fail, and if unable to debug, refer to official documentation
+
 ## Guidelines
 ### Running individual pipelines
 The above script allows running the pipeline in two individual pipelines independently i.e. colmap pipeline and neuralangelo pipeline.
