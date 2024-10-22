@@ -11,6 +11,21 @@ Video &#8594; Images &#8594; Rembg &#8594; Neuralangelo &#8594; Post-processor &
 Rembg is a deep learning tool for isolating foreground objects. It is used to isolate the residual arm from the rest of the image. The post-processor is a python script that uses trimesh to select the largest connected component from the mesh (We still need more fine-tuning for this as there are shortcomings due to artefacts from the Neuralangelo training process). 
 
 ## Guidelines
+### Running individual pipelines
+The above script allows running the pipeline in two individual pipelines independently i.e. colmap pipeline and neuralangelo pipeline.
+To run the Colmap pipeline:
+
+```
+nohup bash automate_colmap.sh video_name.mp4 > colmap_file.log 2>&1 &
+```
+
+To run the neuralangelo pipeline: 
+
+```
+nohup bash automate_neuralangelo.sh video_name.mp4 > neuralangelo_file.log 2>&1 &
+```
+
+### Running whole pipeline
 To run the process for any image, run the following command:
 
 ---
